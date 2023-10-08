@@ -136,7 +136,7 @@ You can use the mountComponent function to dynamically render section components
 
 Here's an example of how you can use the mountComponent function:
 
-```
+```typescript
 strapi.mountComponent("Section-1", (data, addrs) => {
   // Define how to render Section-1 based on the data
   // Return JSX for Section-1
@@ -150,37 +150,21 @@ strapi.mountComponent("Section-1", (data, addrs) => {
 ```typescript
 strapi.mountComponent("Section-5", (data: any, addrs: string) => {
         return (
-
-            <Grid container className='customer_review'>
-                <Grid xs={12}>
-                    <Grid container className="mb-10">
-                        <Grid xs={12}>
-                            <div className="top-heading">
-                                <h2>What customer say<br /> about us</h2>
-                            </div>
-                        </Grid>
-                    </Grid>
-                    <Grid container>
-                        {
-                            data.Relations.comments.data.map(
-                                (item: any) => {
-                                    let rating = item.attributes.rating;
-                                    let classname = rating + " mt-60";
-                                    classname = "review_div " + classname;
-                                    return (
-                                        <Grid xs={6}>
-                                            <div className={classname}>
-                                                <span><img src={addrs + item.attributes.PersonImage.data.attributes.formats.thumbnail.url} alt="" /></span>
-                                                <p>{item.attributes.Comment}</p>
-                                            </div>
-                                        </Grid>)
-                                }
-                            )
-                        }
-                    </Grid>
-                </Grid>
+            <Grid container>
+                {data.Relations.comments.data.map(
+			(item: any) => {
+			    let rating = item.attributes.rating;
+			    let classname = rating + " mt-60";
+			    classname = "review_div " + classname;
+			    return (
+				<Grid xs={6}>
+				    <div className={classname}>
+					<span><img src={addrs + item.attributes.PersonImage.data.attributes.formats.thumbnail.url} alt="" /></span>
+					<p>{item.attributes.Comment}</p>
+				    </div>
+				</Grid>)			}
+ 	   	)}
             </Grid>
-
         )
     })
 ```
