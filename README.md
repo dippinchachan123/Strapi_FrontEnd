@@ -124,6 +124,18 @@ useEffect(() => {
 
 #### Mount Components for Sections.
 
+You can use the mountComponent function to dynamically render section components in your React application. This function takes two arguments:
+
+    Section ID: This is a unique identifier for the section you want to render. It helps the function know which component to render.
+
+    Component Function: This is a JavaScript function that returns a React component. It takes two arguments:
+
+        Data: This is the data Object fetched from the API for the specific section. It's the object which has content you want to display in the component.
+
+        Address (Addrs): This is the domain address of your Strapi Portal. It's used to construct URLs for any additional resources you might need in your component, like images or links.
+
+Here's an example of how you can use the mountComponent function:
+
 ```
 strapi.mountComponent("Section-1", (data, addrs) => {
   // Define how to render Section-1 based on the data
