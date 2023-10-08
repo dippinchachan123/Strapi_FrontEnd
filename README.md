@@ -101,7 +101,7 @@ import Navbar from './Navbar';
 
 #### Set Up State for fetched Data through Strapi API.
 
-```
+```typescript
 const [components, setComponents] = useState(null);
 ```
 
@@ -113,7 +113,7 @@ const strapi = new Strapi('/api/pages/6?populate=deep');
 
 #### Fetch Data and Render Components.
 
-```
+```typescript
 useEffect(() => {
   strapi.configure()
     .then(res => setComponents(strapi.render()))
@@ -135,7 +135,7 @@ strapi.mountComponent("Section-1", (data, addrs) => {
 
 ##### Example : 
 
-```
+```typescript
 strapi.mountComponent("Section-5", (data: any, addrs: string) => {
         return (
 
@@ -188,7 +188,6 @@ return (
   </div>
 );
 ```
-
 
 
 
