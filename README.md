@@ -60,7 +60,7 @@ export const config : configDataType = {
     visibilityPath : "ele.Active"
 }
 ```
-![Paths in Strapi Portal API](https://drive.google.com/file/d/1N4KciQaU_qBVx5hnRZ5DqtDob8zyTVv8/view)
+![Paths in Strapi Portal API]([https://drive.google.com/file/d/1N4KciQaU_qBVx5hnRZ5DqtDob8zyTVv8/view](https://drive.google.com/file/d/1N4KciQaU_qBVx5hnRZ5DqtDob8zyTVv8/view))
 
 
 ### Set Default Strapi Configuration
