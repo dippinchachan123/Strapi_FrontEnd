@@ -64,23 +64,30 @@ export const config : configDataType = {
 
 ### Set Default Strapi Configuration
 
-In your entry point file (e.g., App.jsx), set the default Strapi configuration using the Strapi.setConfig(config) method. This will configure the Strapi instance globally for your application.
+In your entry point file (e.g., Index.tsx), set the default Strapi configuration using the Strapi.setConfig(config) method. This will configure the Strapi instance globally for your application.
 
 ```javascript
-import React from 'react';
-import './App.scss';
+
+//Strapi Code
 import { Strapi } from 'strapi-frontend';
 import { config } from './Strapi/strapi';
+Strapi.setConfig(config);
 
-// Set the default Strapi configuration here
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 
-
-function App() {
-  Strapi.setConfig(config);
-  // Your application code here
-}
-
-export default App;
+root.render(
+  <React.StrictMode>
+    {/* <Homepage
+      open_status = {false}
+            attrName={"r"}
+            value_update={()=>{}} /> */}
+    <Test />
+    {/* <Homepage /> */}
+    
+  </React.StrictMode>
+);
 
 ```
 
