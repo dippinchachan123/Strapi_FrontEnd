@@ -192,9 +192,9 @@ return (
 );
 ```
 
-#### Example of Page Integrated with Strapi-frontend :-
+## Example of Page Integrated with Strapi-frontend
 ```javascript
-	import React from 'react';
+import React from 'react';
 import Grid from "@mui/material/Unstable_Grid2";
 import { Box, Link, Rating } from "@mui/material";
 import './Homepage.scss'
