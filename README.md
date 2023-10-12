@@ -59,8 +59,8 @@ export const config : configDataType = {
     HTMLPathInBlock : "ele.Content[0].content",
     visibilityPath : "ele.Active"
 }
-![Paths In the strapi Portal](https://drive.google.com/file/d/1N4KciQaU_qBVx5hnRZ5DqtDob8zyTVv8/view?usp=sharing)
 ```
+![Paths In the strapi Portal](https://drive.google.com/file/d/1N4KciQaU_qBVx5hnRZ5DqtDob8zyTVv8/view?usp=sharing)
 
 ### Set Default Strapi Configuration
 
