@@ -60,6 +60,7 @@ export const config : configDataType = {
     visibilityPath : "ele.Active"
 }
 ```
+#### See Paths in the Image.
 ![Paths in Strapi Portal](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/e03eac06-1795-46c9-8cca-755895cb2f2e)
 
 
