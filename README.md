@@ -64,7 +64,7 @@ export const config : configDataType = {
 }
 ```
 #### See Paths in the Image.
-![Paths in Strapi Portal](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/e03eac06-1795-46c9-8cca-755895cb2f2e)
+![PathsStrapi](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/2f34372f-7858-46fe-a862-853f65a3f2d0)
 
 
 ### Set Default Strapi Configuration
@@ -134,6 +134,8 @@ strapi.mountComponent("Section-1", (data, addrs) => {
 
 // Repeat the above step for other sections (Section-2, Section-3, etc.)
 ```
+![Strapi_Sections](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/feab51f8-56c0-4c9b-adeb-134b3c659191)
+
 
 ##### Example : 
 
