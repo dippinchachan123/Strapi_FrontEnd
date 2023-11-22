@@ -181,26 +181,27 @@ You can use the mountComponent function to dynamically render Non-Block componen
 Here's an example of how you can use the mountComponent function:
 
 ```typescript
-strapi.mountComponent("data.attributes.Blocks[7].Content.content", (data, addrs) => {
-  // Define how to mount Componet based on the data
-  // Return JSX for data
-});
-
-strapi.mountComponent("data.attributes.Blocks[0].Label", (data, addrs) => {
-  // Define how to mount Componet based on the data
-  // Return JSX for data
-},1);
-
+function mountComponents(starpi : Strapi){
+  //....Others Components
+  //Non-Block Components
+  strapi.mountComponent("data.attributes.Blocks[7].Content.content", (data, addrs) => {
+    // Define how to mount Componet based on the data
+    // Return JSX for data
+  });
+  
+  strapi.mountComponent("data.attributes.Blocks[0].Label", (data, addrs) => {
+    // Define how to mount Componet based on the data
+    // Return JSX for data
+  },1);
+}
 ```
 
 ##### Example : 
 
-Make a function "mountComponents" to collection all mounted Components and call this function later at once.
-
 ```typescript
 function mountComponents(starpi : Strapi){
 
-  strapi.mountComponent("Section-5", (data: any, addrs: string) => {
+  strapi.mountComponent("data.attributes.Blocks[5]", (data: any, addrs: string) => {
           return (
               <Grid container>
                   {data.Relations.comments.data.map((item: any) => {
@@ -218,6 +219,13 @@ function mountComponents(starpi : Strapi){
               </Grid>
           )
   })
+  strapi.mountComponent("data.attributes.Blocks[0].Label", (data, addrs) => {
+        return (
+          <div className = "Facts">
+                Hello {data.title}!!
+          </div> 
+        )
+  },1);
   //Mount more components ...
 }
 ```
@@ -544,6 +552,8 @@ function Homepage() {
 export default Homepage
 
 ```
+
+
 
 
 
