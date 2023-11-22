@@ -30,7 +30,7 @@ Provide a config object of type `configDataType` interface (which is one of the 
  * @property {string} sectionPath - The path to the field that defines the section of a block.
  * @property {string} HTMLPathInBlock - The path to the field containing the HTML of an added block.
  * @property {string} visibilityPath - The path to the field that determines the visibility of a section.
- * @property {string} classNamePath - Path of the field which defines the classname of section.
+ * @property {string} classNamePath - Path of the field which defines the classname of section.By default for Added Section , __**common className is "AddedSect".**__
  */
 export interface configDataType {
   url?: string;
@@ -166,7 +166,7 @@ function mountComponents(starpi : Strapi){
 
 #### Mount Components for Non-Block Data.
 
-You can use the mountComponent function to dynamically render Non-Block components in your React application. This function takes two arguments:
+You can use the overide mountComponent function to dynamically render Non-Block components in your React application. Just pass the path for data instead of Section name.
 
     Path To Data : This is a unique identifier for the data you want to render.Provide proper Path to the data.
 
@@ -181,9 +181,7 @@ You can use the mountComponent function to dynamically render Non-Block componen
 Here's an example of how you can use the mountComponent function:
 
 ```typescript
-function mountComponents(starpi : Strapi){
-  //....Others Components
-  //Non-Block Components
+
   strapi.mountComponent("data.attributes.Blocks[7].Content.content", (data, addrs) => {
     // Define how to mount Componet based on the data
     // Return JSX for data
@@ -193,13 +191,12 @@ function mountComponents(starpi : Strapi){
     // Define how to mount Componet based on the data
     // Return JSX for data
   },1);
-}
+
 ```
 
 ##### Example : 
 
 ```typescript
-function mountComponents(starpi : Strapi){
 
   strapi.mountComponent("data.attributes.Blocks[5]", (data: any, addrs: string) => {
           return (
@@ -227,7 +224,7 @@ function mountComponents(starpi : Strapi){
         )
   },1);
   //Mount more components ...
-}
+
 ```
 
 
