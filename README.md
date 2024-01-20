@@ -20,7 +20,9 @@ npm install strapi-frontend
 ## Demo
 
 ### Part 1 - ![Strapi-Frontend library features in acion](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/7e9e93a3-5522-4a2d-b5bc-ae078fe28781)
+https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/7e9e93a3-5522-4a2d-b5bc-ae078fe28781
 ### Part 2 - ![Integration in react](https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/fb7e2087-8a41-488e-9983-36730ec9d3d6)
+https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/fb7e2087-8a41-488e-9983-36730ec9d3d6
 
 
 
