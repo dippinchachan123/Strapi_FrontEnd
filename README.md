@@ -1,6 +1,4 @@
 
-https://github.com/dippinchachan123/Strapi_FrontEnd/assets/96717673/ae144f6e-947a-4fbd-a995-08d87b29bf01
-
 # Strapi Frontend Integrater
 
 Unlock the full potential of your Strapi-powered backend by seamlessly integrating its API data into your React frontend using the strapi-frontend  Library. 
